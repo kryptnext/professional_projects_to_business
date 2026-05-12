@@ -1,0 +1,306 @@
+/* css/style.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#050505;
+  color:white;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.header{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:#00d9ff;
+}
+
+.menu{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+}
+
+.hero{
+  position:relative;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.banner-slider{
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+
+.banner{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:1s;
+}
+
+.banner.active{
+  opacity:0.3;
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to bottom,
+  rgba(0,0,0,0.3),
+  rgba(0,0,0,0.9));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.tag{
+  display:inline-block;
+  background:#00d9ff20;
+  color:#00d9ff;
+  padding:10px 20px;
+  border-radius:50px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:70px;
+  max-width:800px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:22px;
+  color:#ccc;
+  max-width:700px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+}
+
+.btn{
+  padding:16px 30px;
+  border-radius:15px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.primary{
+  background:#00d9ff;
+  color:black;
+  font-weight:bold;
+}
+
+.secondary{
+  border:1px solid #444;
+  color:white;
+}
+
+section{
+  padding:120px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title span{
+  color:#00d9ff;
+  letter-spacing:4px;
+}
+
+.section-title h2{
+  font-size:48px;
+  margin-top:15px;
+}
+
+.services-grid,
+.projects-grid,
+.companies-grid{
+  display:grid;
+  gap:30px;
+}
+
+.services-grid{
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.companies-grid{
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.projects-grid{
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+}
+
+.card,
+.company-card,
+.project-card{
+  background:#111;
+  border:1px solid #222;
+  border-radius:25px;
+  padding:40px;
+  transition:0.3s;
+}
+
+.card:hover,
+.company-card:hover,
+.project-card:hover{
+  border-color:#00d9ff;
+  transform:translateY(-5px);
+}
+
+.card h3,
+.company-card h3{
+  margin-bottom:20px;
+}
+
+.project-image{
+  height:250px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#00d9ff20,#000);
+  margin-bottom:25px;
+}
+
+.project-content span{
+  color:#00d9ff;
+}
+
+.project-content h3{
+  margin:15px 0;
+  font-size:30px;
+}
+
+.cta-box{
+  background:#0c0c0c;
+  border:1px solid #00d9ff30;
+  border-radius:40px;
+  text-align:center;
+  padding:80px 40px;
+}
+
+.cta h2{
+  font-size:55px;
+  margin-bottom:25px;
+}
+
+.cta p{
+  color:#bbb;
+  margin-bottom:40px;
+  font-size:20px;
+}
+
+footer{
+  border-top:1px solid #222;
+  padding:50px 0;
+}
+
+.footer-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+}
+
+.footer-links a{
+  color:#aaa;
+  text-decoration:none;
+}
+
+@media(max-width:900px){
+
+  .hero h1{
+    font-size:45px;
+  }
+
+  .menu{
+    display:none;
+  }
+
+  .footer-content{
+    flex-direction:column;
+    gap:30px;
+  }
+
+}
+
+/* BANNERS */
+
+.banner-slider{
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.banner{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  opacity:0;
+
+  transform:scale(1.1);
+
+  transition:
+    opacity 1.5s ease,
+    transform 6s ease;
+}
+
+.banner.active{
+
+  opacity:0.35;
+
+  transform:scale(1);
+
+}

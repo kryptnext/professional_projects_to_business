@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Parcerias | KryptNext</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+    }
+
+    /* ========================= */
+    /* HEADER                    */
+    /* ========================= */
+
+    header{
+      width:100%;
+      padding:20px 8%;
+      background:#111827;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    .logo span{
+      color:#38bdf8;
+    }
+
+    nav ul{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    /* ========================= */
+    /* HERO                      */
+    /* ========================= */
+
+    .hero{
+      width:100%;
+      padding:80px 8%;
+
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin:auto;
+
+      color:#cbd5e1;
+      line-height:1.7;
+      font-size:18px;
+    }
+
+    .hero button{
+      margin-top:35px;
+
+      padding:14px 28px;
+
+      border:none;
+      border-radius:12px;
+
+      background:#38bdf8;
+      color:#0f172a;
+
+      font-size:16px;
+      font-weight:bold;
+
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    .hero button:hover{
+      transform:scale(1.05);
+    }
+
+    /* ========================= */
+    /* SLIDER                    */
+    /* ========================= */
+
+    .slider-container{
+      width:84%;
+      height:320px;
+
+      margin:0 auto 80px;
+
+      position:relative;
+
+      overflow:hidden;
+
+      border-radius:20px;
+
+      box-shadow:0 0 25px rgba(0,0,0,0.4);
+    }
+
+    .slide{
+      position:absolute;
+
+      width:100%;
+      height:100%;
+
+      opacity:0;
+
+      transition:opacity 0.8s ease;
+    }
+
+    .slide.active{
+      opacity:1;
+    }
+
+    .slide img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+    }
+
+    /* ========================= */
+    /* PARCEIROS                 */
+    /* ========================= */
+
+    .partners-section{
+      width:84%;
+      margin:auto;
+      padding-bottom:100px;
+    }
+
+    .section-title{
+      font-size:36px;
+      margin-bottom:40px;
+      text-align:center;
+    }
+
+    .partners-grid{
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit, minmax(280px, 1fr));
+
+      gap:30px;
+    }
+
+    .partner-card{
+      background:#111827;
+
+      padding:25px;
+
+      border-radius:20px;
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      transition:0.3s;
+    }
+
+    .partner-card:hover{
+      transform:translateY(-8px);
+      border-color:#38bdf8;
+    }
+
+    .partner-card img{
+      width:100%;
+      height:180px;
+
+      object-fit:cover;
+
+      border-radius:12px;
+
+      margin-bottom:20px;
+    }
+
+    .partner-card h3{
+      margin-bottom:12px;
+      font-size:24px;
+    }
+
+    .partner-card p{
+      color:#cbd5e1;
+      line-height:1.6;
+
+      margin-bottom:20px;
+    }
+
+    .partner-card a{
+      display:inline-block;
+
+      padding:12px 18px;
+
+      background:#38bdf8;
+      color:#0f172a;
+
+      text-decoration:none;
+
+      border-radius:10px;
+
+      font-weight:bold;
+
+      transition:0.3s;
+    }
+
+    .partner-card a:hover{
+      transform:scale(1.05);
+    }
+
+    /* ========================= */
+    /* FOOTER                    */
+    /* ========================= */
+
+    footer{
+      background:#111827;
+
+      padding:30px;
+
+      text-align:center;
+
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    footer p{
+      color:#94a3b8;
+    }
+
+    /* ========================= */
+    /* RESPONSIVO                */
+    /* ========================= */
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:36px;
+      }
+
+      .slider-container{
+        height:220px;
+      }
+
+      nav{
+        display:none;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">
+      Krypt<span>Next</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="https://kryptnext.github.io/professional_projects_to_business/index.html">Home</a></li>
+        <li><a href="https://kryptnext.github.io/professional_projects_to_business/index.html">Serviços</a></li>
+        <li><a href="#">Divulgações</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>
+      Empresas Parceiras
+    </h1>
+
+    <p>
+      Conheça empresas, marcas e negócios
+      que fazem parte do ecossistema digital
+      da KryptNext.
+    </p>
+
+    <button>
+      Seja um Parceiro
+    </button>
+
+  </section>
+
+  <!-- SLIDER -->
+
+  <section class="slider-container">
+
+    <div class="slide active">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" alt="">
+    </div>
+
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600&auto=format&fit=crop" alt="">
+    </div>
+
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop" alt="">
+    </div>
+
+  </section>
+
+  <!-- PARCEIROS -->
+
+  <section class="partners-section">
+
+    <h2 class="section-title">
+      Parceiros em Destaque
+    </h2>
+
+    <div class="partners-grid">
+
+      <!-- CARD 1 -->
+
+      <div class="partner-card">
+
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1200&auto=format&fit=crop" alt="">
+
+        <h3>SCAP BOC</h3>
+
+        <p>
+          Oficina e autopeças especializada em
+          escapamentos, suspensão e manutenção automotiva.
+        </p>
+
+        <a href="#">
+          Visitar Parceiro
+        </a>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="partner-card">
+
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="">
+
+        <h3>Loja Exemplo</h3>
+
+        <p>
+          Soluções completas para tecnologia,
+          acessórios e suporte digital.
+        </p>
+
+        <a href="#">
+          Visitar Parceiro
+        </a>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="partner-card">
+
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop" alt="">
+
+        <h3>Empresa Premium</h3>
+
+        <p>
+          Parceiro premium com destaque especial
+          e campanhas patrocinadas.
+        </p>
+
+        <a href="#">
+          Visitar Parceiro
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 KryptNext — Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    const slides = document.querySelectorAll('.slide');
+
+    let currentSlide = 0;
+
+    function nextSlide(){
+
+      slides[currentSlide]
+      .classList.remove('active');
+
+      currentSlide =
+      (currentSlide + 1) % slides.length;
+
+      slides[currentSlide]
+      .classList.add('active');
+    }
+
+    setInterval(nextSlide, 4000);
+
+  </script>
+
+</body>
+</html>

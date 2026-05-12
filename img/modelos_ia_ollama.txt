@@ -1,0 +1,179 @@
+
+MODELOS DE IA RECOMENDADOS (OLLAMA) — 2026
+==========================================
+
+1. QWEN 2.5 CODER
+-----------------
+Melhor uso:
+- Desenvolvimento web
+- HTML/CSS/JS
+- React
+- Laravel
+- APIs
+- Tailwind
+- Landing pages
+- Sistemas web
+
+Versões:
+- 3B → PC fraco
+- 7B → melhor custo-benefício
+- 14B → muito forte
+
+Instalação:
+ollama run qwen2.5-coder:7b
+
+
+2. DEEPSEEK CODER V2
+--------------------
+Melhor uso:
+- Sistemas profissionais
+- Backend complexo
+- SaaS
+- ERP
+- Arquitetura de software
+- APIs grandes
+- Engenharia de software
+
+Ponto negativo:
+- Muito pesado
+- Ideal para PCs fortes
+
+Instalação:
+ollama run deepseek-coder-v2
+
+
+3. QWEN 3
+----------
+Melhor uso:
+- Planejamento
+- Conversa geral
+- Estratégia
+- Brainstorm
+- Documentação
+- Consultoria
+
+Instalação:
+ollama run qwen3
+
+
+4. LLAMA 3
+-----------
+Melhor uso:
+- Uso geral
+- Conversas
+- Conteúdo
+- Explicações
+- Assistente geral
+
+Instalação:
+ollama run llama3
+
+
+5. MISTRAL
+-----------
+Melhor uso:
+- Bots
+- Agentes
+- Automações
+- Fluxos automáticos
+- Integrações
+
+Instalação:
+ollama run mistral
+
+
+6. PHI-3
+---------
+Melhor uso:
+- PCs fracos
+- Pouca RAM
+- Assistente leve
+- Respostas rápidas
+- Automação leve
+
+Instalação:
+ollama run phi3
+
+
+7. MIXTRAL
+-----------
+Melhor uso:
+- Uso profissional pesado
+- Contexto longo
+- Grandes projetos
+- Assistente avançado
+
+Ponto negativo:
+- Pesado
+
+Instalação:
+ollama run mixtral
+
+
+8. CODESTRAL
+-------------
+Melhor uso:
+- Programação avançada
+- Refatoração
+- Código profissional
+- Backend
+
+Instalação:
+ollama run codestral
+
+
+SETUP RECOMENDADO PARA VOCÊ
+===========================
+
+LANDING PAGES:
+- Qwen 2.5 Coder 7B
+
+SISTEMAS PROFISSIONAIS:
+- DeepSeek Coder V2
+
+USO GERAL:
+- Llama 3
+
+PC FRACO:
+- Phi-3
+
+AUTOMAÇÕES:
+- Mistral
+
+
+LOCAL DOS MODELOS NO LINUX/FEDORA
+=================================
+
+~/.ollama/models
+
+
+COMO FAZER BACKUP DOS MODELOS
+=============================
+
+cp -r ~/.ollama /SEU_HD/
+
+
+USAR MODELOS DIRETO DO HD EXTERNO
+=================================
+
+OLLAMA_MODELS=/CAMINHO_DO_HD ollama serve
+
+
+EXEMPLO:
+========
+
+OLLAMA_MODELS=/run/media/wesley/HD/modelos ollama serve
+
+
+FLUXO COMPLETO OFFLINE
+======================
+
+Ollama
+↓
+Modelos no HD
+↓
+Open WebUI / Continue.dev
+↓
+VS Code
+
+Tudo offline.

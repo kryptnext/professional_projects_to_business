@@ -1,0 +1,1080 @@
+# KryptNext — Growth System
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KryptNext Growth System</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#020617;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    /* ========================= */
+    /* HEADER */
+    /* ========================= */
+
+    header{
+
+      width:100%;
+      padding:22px 8%;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      position:fixed;
+      top:0;
+
+      background:rgba(2,6,23,0.92);
+      backdrop-filter:blur(12px);
+
+      border-bottom:
+      1px solid rgba(255,255,255,0.05);
+
+      z-index:999;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+    }
+
+    .logo span{
+      color:#39ff14;
+    }
+
+    nav ul{
+      display:flex;
+      gap:28px;
+      list-style:none;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#39ff14;
+    }
+
+    /* ========================= */
+    /* HERO */
+    /* ========================= */
+
+    .hero{
+
+      width:84%;
+      margin:180px auto 120px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:70px;
+    }
+
+    .hero-content{
+      flex:1;
+    }
+
+    .hero-tag{
+
+      display:inline-block;
+
+      padding:10px 18px;
+
+      border-radius:999px;
+
+      background:
+      rgba(57,255,20,0.08);
+
+      color:#39ff14;
+
+      font-size:13px;
+      font-weight:bold;
+
+      letter-spacing:1px;
+
+      margin-bottom:30px;
+    }
+
+    .hero h1{
+
+      font-size:72px;
+      line-height:1.05;
+
+      margin-bottom:30px;
+    }
+
+    .hero h1 span{
+      color:#39ff14;
+    }
+
+    .hero p{
+
+      color:#94a3b8;
+
+      font-size:20px;
+      line-height:1.8;
+
+      max-width:680px;
+
+      margin-bottom:40px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+
+      padding:16px 30px;
+
+      border-radius:14px;
+
+      text-decoration:none;
+      font-weight:bold;
+
+      transition:0.3s;
+    }
+
+    .btn-primary{
+
+      background:#39ff14;
+      color:#000;
+    }
+
+    .btn-secondary{
+
+      border:
+      1px solid rgba(255,255,255,0.12);
+
+      color:white;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover{
+      transform:translateY(-4px);
+    }
+
+    .hero-card{
+
+      flex:1;
+
+      background:
+      linear-gradient(
+      135deg,
+      #050816,
+      #07101f
+      );
+
+      border:
+      1px solid rgba(255,255,255,0.08);
+
+      border-radius:34px;
+
+      padding:40px;
+
+      box-shadow:
+      0 0 50px rgba(57,255,20,0.08);
+    }
+
+    .hero-card h3{
+
+      font-size:34px;
+
+      margin-bottom:25px;
+    }
+
+    .hero-list{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .hero-item{
+
+      display:flex;
+      align-items:center;
+
+      gap:16px;
+
+      padding:18px;
+
+      border-radius:16px;
+
+      background:
+      rgba(255,255,255,0.03);
+    }
+
+    .hero-icon{
+      font-size:28px;
+    }
+
+    /* ========================= */
+    /* FLOW IMAGE */
+    /* ========================= */
+
+    .flow-image{
+
+      width:84%;
+      margin:0 auto 140px;
+    }
+
+    .flow-image img{
+
+      width:100%;
+
+      border-radius:30px;
+
+      border:
+      1px solid rgba(255,255,255,0.06);
+
+      box-shadow:
+      0 0 40px rgba(57,255,20,0.08);
+    }
+
+    /* ========================= */
+    /* COMPLETE SOLUTION */
+    /* ========================= */
+
+    .complete-solution{
+
+      width:84%;
+      margin:0 auto 140px;
+
+      background:
+      linear-gradient(
+      135deg,
+      #050816,
+      #07101f
+      );
+
+      border:
+      1px solid rgba(255,255,255,0.08);
+
+      border-radius:36px;
+
+      padding:70px 50px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title span{
+
+      display:inline-block;
+
+      color:#39ff14;
+
+      font-size:13px;
+      font-weight:bold;
+
+      letter-spacing:1px;
+
+      margin-bottom:20px;
+    }
+
+    .section-title h2{
+
+      font-size:56px;
+
+      margin-bottom:20px;
+    }
+
+    .section-title p{
+
+      color:#94a3b8;
+
+      font-size:19px;
+
+      line-height:1.8;
+
+      max-width:760px;
+
+      margin:auto;
+    }
+
+    .solution-grid{
+
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(240px,1fr));
+
+      gap:25px;
+    }
+
+    .solution-box{
+
+      background:
+      rgba(255,255,255,0.03);
+
+      border:
+      1px solid rgba(255,255,255,0.05);
+
+      border-radius:24px;
+
+      padding:30px;
+
+      transition:0.3s;
+    }
+
+    .solution-box:hover{
+
+      transform:translateY(-8px);
+
+      border-color:#39ff14;
+    }
+
+    .solution-box h3{
+
+      font-size:28px;
+
+      margin-bottom:18px;
+    }
+
+    .solution-box p{
+
+      color:#94a3b8;
+      line-height:1.7;
+    }
+
+    /* ========================= */
+    /* SERVICES */
+    /* ========================= */
+
+    .services{
+
+      width:84%;
+      margin:0 auto 140px;
+    }
+
+    .services-grid{
+
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(300px,1fr));
+
+      gap:35px;
+    }
+
+    .service-card{
+
+      background:#050816;
+
+      border:
+      1px solid rgba(255,255,255,0.08);
+
+      border-radius:30px;
+
+      padding:40px 35px;
+
+      transition:0.35s;
+    }
+
+    .service-card:hover{
+
+      transform:translateY(-10px);
+
+      border-color:#39ff14;
+
+      box-shadow:
+      0 0 35px rgba(57,255,20,0.08);
+    }
+
+    .service-icon{
+
+      font-size:58px;
+
+      margin-bottom:28px;
+    }
+
+    .service-card h3{
+
+      font-size:34px;
+
+      margin-bottom:20px;
+    }
+
+    .service-card p{
+
+      color:#94a3b8;
+
+      line-height:1.8;
+
+      font-size:17px;
+    }
+
+    /* ========================= */
+    /* CTA */
+    /* ========================= */
+
+    .cta{
+
+      width:84%;
+      margin:0 auto 140px;
+
+      text-align:center;
+
+      background:
+      linear-gradient(
+      135deg,
+      #39ff14,
+      #68ff4a
+      );
+
+      border-radius:38px;
+
+      padding:80px 50px;
+
+      color:#000;
+    }
+
+    .cta h2{
+
+      font-size:58px;
+
+      margin-bottom:25px;
+    }
+
+    .cta p{
+
+      font-size:20px;
+
+      line-height:1.8;
+
+      max-width:760px;
+
+      margin:auto auto 40px;
+    }
+
+    .cta a{
+
+      display:inline-block;
+
+      padding:18px 34px;
+
+      background:#000;
+
+      color:white;
+
+      border-radius:16px;
+
+      text-decoration:none;
+      font-weight:bold;
+
+      transition:0.3s;
+    }
+
+    .cta a:hover{
+      transform:translateY(-4px);
+    }
+
+    /* ========================= */
+    /* FOOTER */
+    /* ========================= */
+
+    footer{
+
+      padding:40px;
+
+      text-align:center;
+
+      border-top:
+      1px solid rgba(255,255,255,0.06);
+    }
+
+    footer p{
+      color:#64748b;
+    }
+
+    /* ========================= */
+    /* RESPONSIVO */
+    /* ========================= */
+
+    @media(max-width:1100px){
+
+      .hero{
+        flex-direction:column;
+      }
+
+      .hero h1{
+        font-size:56px;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero,
+      .flow-image,
+      .complete-solution,
+      .services,
+      .cta{
+        width:92%;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .section-title h2,
+      .cta h2{
+        font-size:38px;
+      }
+
+      .service-card h3,
+      .solution-box h3{
+        font-size:28px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ========================= -->
+  <!-- HEADER -->
+  <!-- ========================= -->
+
+  <header>
+
+    <div class="logo">
+      KRYPT<span>NEXT</span>
+    </div>
+
+    <nav>
+
+      <ul>
+
+        <li>
+          <a href="#">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#services">
+            Serviços
+          </a>
+        </li>
+
+        <li>
+          <a href="#growth">
+            Growth System
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            Contato
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- ========================= -->
+  <!-- HERO -->
+  <!-- ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <span class="hero-tag">
+        KRYPTNEXT GROWTH SYSTEM
+      </span>
+
+      <h1>
+        Um sistema completo para
+        <span>
+          atrair,
+        </span>
+        atender e converter clientes.
+      </h1>
+
+      <p>
+        Landing pages, automação de atendimento,
+        estratégia digital e posts para transformar
+        presença online em oportunidades reais.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#contact" class="btn-primary">
+          Solicitar Projeto
+        </a>
+
+        <a href="#services" class="btn-secondary">
+          Ver Serviços
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-card">
+
+      <h3>
+        O que está incluso
+      </h3>
+
+      <div class="hero-list">
+
+        <div class="hero-item">
+          <div class="hero-icon">🌐</div>
+          <div>
+            Landing Pages e Conversão
+          </div>
+        </div>
+
+        <div class="hero-item">
+          <div class="hero-icon">💬</div>
+          <div>
+            Automação de Atendimento
+          </div>
+        </div>
+
+        <div class="hero-item">
+          <div class="hero-icon">📈</div>
+          <div>
+            Estratégia Digital
+          </div>
+        </div>
+
+        <div class="hero-item">
+          <div class="hero-icon">📱</div>
+          <div>
+            Posts para Redes Sociais
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- IMAGEM -->
+  <!-- ========================= -->
+
+  <section class="flow-image">
+
+    <img src="img/lead-flow.png" alt="Fluxo de crescimento KryptNext">
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- SOLUÇÃO COMPLETA -->
+  <!-- ========================= -->
+
+  <section class="complete-solution" id="growth">
+
+    <div class="section-title">
+
+      <span>
+        SOLUÇÃO COMPLETA
+      </span>
+
+      <h2>
+        Growth System KryptNext
+      </h2>
+
+      <p>
+        Uma estrutura completa para gerar oportunidades,
+        automatizar atendimento e fortalecer sua empresa no digital.
+      </p>
+
+    </div>
+
+    <div class="solution-grid">
+
+      <div class="solution-box">
+
+        <h3>
+          Conversão
+        </h3>
+
+        <p>
+          Páginas otimizadas para transformar visitantes em leads.
+        </p>
+
+      </div>
+
+      <div class="solution-box">
+
+        <h3>
+          Automação
+        </h3>
+
+        <p>
+          Fluxos automáticos para organizar e agilizar atendimento.
+        </p>
+
+      </div>
+
+      <div class="solution-box">
+
+        <h3>
+          Estratégia
+        </h3>
+
+        <p>
+          Planejamento digital para fortalecer presença e crescimento.
+        </p>
+
+      </div>
+
+      <div class="solution-box">
+
+        <h3>
+          Posts
+        </h3>
+
+        <p>
+          Artes e publicações para manter sua marca ativa online.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- SERVIÇOS -->
+  <!-- ========================= -->
+
+  <section class="services" id="services">
+
+    <div class="section-title">
+
+      <span>
+        SOLUÇÕES INDIVIDUAIS
+      </span>
+
+      <h2>
+        Serviços separados
+      </h2>
+
+      <p>
+        Escolha soluções específicas ou evolua para um sistema completo.
+      </p>
+
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          🌐
+        </div>
+
+        <h3>
+          Conversão
+        </h3>
+
+        <p>
+          Landing pages e estruturas para captura de leads.
+        </p>
+
+      </div>
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          💬
+        </div>
+
+        <h3>
+          Automação
+        </h3>
+
+        <p>
+          WhatsApp automático e fluxos inteligentes de atendimento.
+        </p>
+
+      </div>
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          📈
+        </div>
+
+        <h3>
+          Estratégia
+        </h3>
+
+        <p>
+          Planejamento digital para posicionamento e crescimento.
+        </p>
+
+      </div>
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          📱
+        </div>
+
+        <h3>
+          Posts
+        </h3>
+
+        <p>
+          Posts para redes sociais, artes e presença digital.
+        </p>
+
+      </div>
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          🛠️
+        </div>
+
+        <h3>
+          Suporte Tecnológico
+        </h3>
+
+        <p>
+          Configuração, manutenção e suporte para soluções digitais.
+        </p>
+
+      </div>
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          🤝
+        </div>
+
+        <h3>
+          Rede de Parceiros
+        </h3>
+
+        <p>
+          Divulgação empresarial e anúncios para parceiros.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- CTA -->
+  <!-- ========================= -->
+
+  <section class="cta" id="contact">
+
+    <h2>
+      Sua empresa pronta para crescer no digital
+    </h2>
+
+    <p>
+      Estruture atendimento, automação, conversão e presença digital em um único fluxo inteligente.
+    </p>
+
+    <a href="#">
+      Entrar em Contato
+    </a>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- PLANOS -->
+  <!-- ========================= -->
+
+  <section class="services" id="plans">
+
+    <div class="section-title">
+
+      <span>
+        PLANOS KRYPTNEXT
+      </span>
+
+      <h2>
+        Estruturas para cada etapa do seu negócio
+      </h2>
+
+      <p>
+        Escolha entre soluções individuais, suporte contínuo ou um sistema completo de crescimento digital.
+      </p>
+
+    </div>
+
+    <div class="services-grid">
+
+      <!-- PLANO 1 -->
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          🧩
+        </div>
+
+        <h3>
+          Soluções Individuais
+        </h3>
+
+        <p>
+          Landing pages, automações, posts e serviços específicos para empresas que desejam começar no digital.
+        </p>
+
+        <br>
+
+        <h2 style="color:#39ff14; font-size:42px; margin-bottom:20px;">
+          R$ 600+
+        </h2>
+
+        <p>
+          Ideal para projetos menores e necessidades específicas.
+        </p>
+
+      </div>
+
+      <!-- PLANO 2 -->
+
+      <div class="service-card" style="border:1px solid #39ff14; transform:scale(1.03); box-shadow:0 0 40px rgba(57,255,20,0.10);">
+
+        <div class="service-icon">
+          🚀
+        </div>
+
+        <h3>
+          Growth System
+        </h3>
+
+        <p>
+          Estrutura completa com conversão, automação, estratégia digital e posts para redes sociais.
+        </p>
+
+        <br>
+
+        <h2 style="color:#39ff14; font-size:42px; margin-bottom:20px;">
+          R$ 1.800
+        </h2>
+
+        <p>
+          Implantação completa do sistema digital da sua empresa.
+        </p>
+
+      </div>
+
+      <!-- PLANO 3 -->
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          🛠️
+        </div>
+
+        <h3>
+          Suporte Essencial
+        </h3>
+
+        <p>
+          Suporte técnico, manutenção, atualizações simples e acompanhamento digital mensal.
+        </p>
+
+        <br>
+
+        <h2 style="color:#39ff14; font-size:42px; margin-bottom:20px;">
+          R$ 297/mês
+        </h2>
+
+        <p>
+          Continuidade, suporte e evolução da presença digital.
+        </p>
+
+      </div>
+
+      <!-- PLANO 4 -->
+
+      <div class="service-card">
+
+        <div class="service-icon">
+          📈
+        </div>
+
+        <h3>
+          Crescimento Digital
+        </h3>
+
+        <p>
+          Estratégia contínua, automações, posts mensais e melhorias para aumentar presença online.
+        </p>
+
+        <br>
+
+        <h2 style="color:#39ff14; font-size:42px; margin-bottom:20px;">
+          R$ 597/mês
+        </h2>
+
+        <p>
+          Ideal para empresas que desejam crescer constantemente.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+
+  <footer>
+
+    <p>
+      © 2026 KryptNext — Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+</body>
+</html>
+```
